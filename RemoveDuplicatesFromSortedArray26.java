@@ -6,7 +6,7 @@ public class RemoveDuplicatesFromSortedArray26 {
  * 不要使用额外的数组空间，你必须在 原地 修改输入数组 并在使用 O(1) 额外空间的条件下完成。
  * 思路：双指针
 */
-	public static int removeDuplicates(int[] nums) {
+	public int removeDuplicates(int[] nums) {
 		if (nums == null || nums.length == 0)
 			return 0;
 		int left = 0;
@@ -15,20 +15,5 @@ public class RemoveDuplicatesFromSortedArray26 {
 				nums[++left] = nums[right];
 		}
 		return  ++left;
-	}
-	public static void main(String[] arg) {
-		int[] nums = new int[10];
-		nums[0] = 0;
-		nums[1] = 0;
-		nums[2] = 1;
-		nums[3] = 1;
-		nums[4] = 1;
-		nums[5] = 2;
-		nums[6] = 2;
-		nums[7] = 3;
-		nums[8] = 3;
-		nums[9] = 4;
-		int len = removeDuplicates(nums);
-		System.out.println(len);
 	}
 }
